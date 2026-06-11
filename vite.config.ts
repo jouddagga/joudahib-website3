@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  base: "/joudahib-website1/",
+  base: "/joudahib-website3/",
   plugins: [
     react(),
     tailwindcss(),
