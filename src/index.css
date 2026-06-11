@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --font-sans: var(--app-font-sans);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: 210 20% 98%;
+  --foreground: 213 30% 15%;
+  --border: 210 20% 88%;
+  --input: 210 20% 88%;
+  --ring: 207 70% 35%;
+  --card: 0 0% 100%;
+  --card-foreground: 213 30% 15%;
+  --primary: 207 70% 35%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 15% 93%;
+  --secondary-foreground: 213 30% 20%;
+  --muted: 210 15% 93%;
+  --muted-foreground: 213 15% 50%;
+  --accent: 207 60% 92%;
+  --accent-foreground: 207 70% 25%;
+  --app-font-sans: 'Inter', 'Segoe UI', sans-serif;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border box-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* RTL support */
+[dir="rtl"] {
+  font-family: 'Cairo', 'Arial', sans-serif;
+}
+
+/* Smooth transitions */
+.transition-all-300 {
+  transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E5F8E;
+  border-radius: 3px;
+}
+
+/* Animated underline */
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #1E5F8E;
+  transition: width 0.3s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #0D3A5C 0%, #1E5F8E 50%, #2A7DBF 100%);
+}
+
+/* Card hover */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(30, 95, 142, 0.15);
+}
+
+/* Section fade-in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Stats counter */
+.stat-card {
+  background: linear-gradient(135deg, #1E5F8E, #2A7DBF);
+}
