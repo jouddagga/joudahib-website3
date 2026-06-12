@@ -30,8 +30,8 @@ const contactInfo = [
       </svg>
     ),
     labelKey: "contact.website",
-    value: "ahib.ae",
-    href: "http://ahib.ae",
+    value: "alhoson.ae",
+    href: "https://alhoson.ae",
   },
   {
     icon: (
