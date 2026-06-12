@@ -31,7 +31,7 @@ const contactInfo = [
     ),
     labelKey: "contact.website",
     value: "www.ahib.ae",
-    href: "http://www.ahib.ae",
+    href: "http://ahib.ae",
   },
   {
     icon: (
