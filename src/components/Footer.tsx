@@ -112,7 +112,7 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <span className="text-[#4A9ECC]">🌐</span>
                 <a
-                  href="http://www.ahib.ae"
+                  href="https://alhoson.ae"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
