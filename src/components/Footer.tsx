@@ -117,7 +117,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >
-                  www.ahib.ae
+                  alhoson.ae
                 </a>
               </li>
             </ul>
